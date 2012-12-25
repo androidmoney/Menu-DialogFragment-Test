@@ -7,4 +7,13 @@ If displaying the Dialog Fragment using the on-screen button, pausing/resuming t
 
 But if the dialog fragment is displayed via the Menu Item (must be a pop-up menu), the dialog fragment disappears after a resume.
 
-The dialog can be mde to "stick" if you wrap the display of the fragment into a Handler set to about 300ms delay. Anything less, includeing no delay, still fails.
+The dialog can be mde to "stick" if you wrap the display of the fragment into a Handler set to about 300ms delay. Anything less, including no delay, still fails.
+
+            new Handler().postDelayed(new Runnable()
+            {
+                @Override
+                public void run()
+                {
+                    showDialogFragment();
+                }
+            }, 300);
