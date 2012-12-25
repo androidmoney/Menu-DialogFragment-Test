@@ -83,12 +83,6 @@ public class MainActivity extends Activity
 
     public static class MyDialogFragment extends DialogFragment
     {
-        public MyDialogFragment()
-        {
-            // Default -- needed for Fragment Manager
-        }
-
-
         @Override
         public Dialog onCreateDialog(Bundle state)
         {
